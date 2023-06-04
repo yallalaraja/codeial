@@ -2,9 +2,14 @@ const express = require('express');
 const port = 8000;
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const db = require('./config/mongoose');
+const cookiePaser = require('cookie-parser');
 
 app.use(expressLayouts);
 app.use(express.static('./assets'));
+app.use(cookiePaser());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 //extract styles and scripts from subpages into layout app
 app.set('layout extractStyles',true);
