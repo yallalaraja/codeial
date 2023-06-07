@@ -4,13 +4,13 @@
         <title> <%=title%> </title>
     </head>
     <body>
-
-        <!-- header section -->
-
-        <!-- <%- include('_header'); %> -->
         <h1> Codeial / <%=title%> </h1>
-        <!-- <%- include('_footer'); %> -->
-
-        <!-- footer section -->
+        <section id = "feed-posts">
+            <h4>Posts</h4>
+            <form action="" id="new-post-form" method = "POST">
+                <textarea name="content" cols="30" rows="3"></textarea>
+                <input type="submit" value="Post">
+            </form>
+        </section>
     </body>
 </html>
