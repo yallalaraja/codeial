@@ -1,4 +1,4 @@
-const User = require('../models/users');
+const User = require('../models/user');
 
 module.exports.profile = function(req,res){
     // res.end('<h1>User Profile</h1>');
@@ -10,7 +10,7 @@ module.exports.profile = function(req,res){
 //render the sign up page
 module.exports.signUp = function(req,res){
   if(req.isAuthenticated()){
-    return res.redirect('/users/profile');
+    return res.redirect('/user/profile');
   }
     return res.render('user_sign_up',{
         title:"codeial | signup"
